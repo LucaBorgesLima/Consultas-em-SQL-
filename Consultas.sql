@@ -1,5 +1,5 @@
 
---Em Quais Estados Estão Localizados os Funcionários Da Empresa?
+--Em Quais Estados EstÃ£o Localizados os FuncionÃ¡rios Da Empresa?
 Select StateProvinceName as Estado , Count(*) as Funcionarios
 from HumanResources.vEmployee 
 GROUP BY StateProvinceName
@@ -12,7 +12,7 @@ from HumanResources.vEmployeeDepartment
 group by Department
 order by Quantidade DESC
 
--- Verifique e ordene a quantidade de produtos do inventário.
+-- Verifique e ordene a quantidade de produtos do inventÃ¡rio.
 
 select p.ProductID ,p.Name , SUM (pi.Quantity) as Quantidade
 from Production.Product p 
@@ -29,7 +29,7 @@ inner join Production.TransactionHistory pt on p.ProductID = pt.ProductID
 where p.ProductID = 781 -- ID do Produto
 group by p.ProductID , p.Name ,p.Size ,p.Weight
 
--- Verifique os produtos que estejam acima da média de preços
+-- Verifique os produtos que estejam acima da mÃ©dia de preÃ§os
 select * 
 from Production.Product
 where ListPrice >= (select avg(ListPrice) FROM Production.Product)
