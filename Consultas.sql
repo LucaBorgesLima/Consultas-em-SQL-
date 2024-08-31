@@ -59,3 +59,9 @@ from Production.Product p
 left join Production.ProductSubcategory ps on p.ProductSubcategoryID = ps.ProductSubcategoryID
 group by coalesce(ps.Name,'Sem categoria')
 order by Quantidade desc
+
+
+
+
+
+
